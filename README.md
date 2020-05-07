@@ -16,20 +16,7 @@ In order to prevent Sybil attacks, the faucet will only drip to users that have 
 
 The faucet will only drip to addresses that contain the string `ksma`(case-insensitive, that is, `KSMA` or `kSmA` would work). It will also never drip to the same address twice. Thus, a new address has to be created each time a user requests KSM tokens.
 
-Obtaining a valid address will require generating numerous addresses until you find one which meets the requirements. You can think of this as a small proof-of-work. You can use the command-line tool [Subkey](#Using-Subkey), the web interface ([PolkadotJS Dashboard](#Using-PolkadotJS-Dashboard)), or any other program capable of generating arbitrary addresses.  You can even code up your own if you like.
-
-
-#### Using PolkadotJS Dashboard
-
-1. Go to [Settings](https://polkadot.js.org/apps/#/settings) and select `Kusama (canary)` on the address network prefix drop-down list, then click `Save & Reload`.
-![](https://i.imgur.com/Ci1SJvL.png)
-
-2. Under the [Accounts page](https://polkadot.js.org/apps/#/accounts), select `Vanity Address` tab.
-![](https://i.imgur.com/EZw5iOx.png)
-
-3. Input `ksma` in the "search for" textbox and leave the "keypair crypto type" by default unless you want to use another type.  After this, click `Start generation`. It will most likely take at least 10 mins to generate the address pattern you want.
-![](https://i.imgur.com/ckbunwK.png)
-
+Obtaining a valid address will require generating numerous addresses until you find one which meets the requirements. You can think of this as a small proof-of-work. You can use the command-line tool [Subkey](#Using-Subkey) or any other program capable of generating arbitrary addresses.  You can even code up your own if you like.
 
 #### Using Subkey
 
@@ -40,6 +27,7 @@ You can install `subkey` with this one-line command:
 ```
 cargo install --force --git https://github.com/paritytech/substrate subkey
 ```
+Errors might show during installation but it should still work.
 
 Alternatively, you can build `subkey` from the source code.
 
